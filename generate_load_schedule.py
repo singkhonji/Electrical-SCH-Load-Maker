@@ -6,7 +6,9 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side, GradientFill
 from openpyxl.utils import get_column_letter
 
-OUT = r"C:\Users\123\Desktop\D1-MDB-COM-FOH1A-A_LoadSchedule_Generated.xlsx"
+import os as _os
+_BASE = _os.path.dirname(_os.path.abspath(__file__))
+OUT = _os.path.join(_BASE, "output", "D1-MDB-COM-FOH1A-A_LoadSchedule_Generated.xlsx")
 
 # ── Colours (RGB without alpha) ───────────────────────────────────────────────
 def fill(hex6):
